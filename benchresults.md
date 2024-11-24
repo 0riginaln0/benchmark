@@ -10,8 +10,8 @@
 
 ![Absolute benchmark results](AbsoluteBenchmarkResults.png)
 ![Relative benchmark results](RelativeBenchmarkResults.png)
-![Scoped Relative benchmark results](RelativeBenchmarkResultsNoLosers.png)
 ![Scoped Absolute benchmark results](AbsoluteBenchmarkResultsNoLosers.png)
+![Scoped Relative benchmark results](RelativeBenchmarkResultsNoLosers.png)
 
 ## `Ruby`
 ```shell
