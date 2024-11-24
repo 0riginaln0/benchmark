@@ -1,10 +1,11 @@
 import matplotlib.pyplot as plt
 import re
+import pandas as pd
 
-WITHOUT_LOSERS = True
+WITHOUT_LOSERS = False
 
 # Read the markdown file
-with open("benchresults.md", "r") as file:
+with open("readme.md", "r") as file:
     content = file.read()
 
 # Regular expression to extract language and real time
@@ -43,6 +44,20 @@ if WITHOUT_LOSERS:
     sorted_real_times = sorted_real_times[:-4]
     relative_times = relative_times[:-4]
 
+# Create a comparison DataFrame
+comparison_data = pd.DataFrame(index=sorted_languages, columns=sorted_languages)
+
+# Fill the DataFrame with relative performance data
+for i, lang1 in enumerate(sorted_languages):
+    for j, lang2 in enumerate(sorted_languages):
+        if i == j:
+            comparison_data.loc[lang1, lang2] = 1.0  # Self comparison
+        else:
+            comparison_data.loc[lang1, lang2] = relative_times[i] / relative_times[j]
+
+# Save the comparison DataFrame to a CSV file
+csv_filename = "benchmark_comparison_results.csv"
+comparison_data.to_csv(csv_filename)
 
 # Plot the original chart
 plt.figure(figsize=(10, 6))
