@@ -1,12 +1,10 @@
-local floor = math.floor
-
 local function image_ramp_green(n)
   local img = {}
   local f = 255 / (n - 1)
   for i = 1, n do
     img[i] = {
       red = 0,
-      green = floor((i - 1) * f),
+      green = math.floor((i - 1) * f),
       blue = 0,
       alpha = 255
     }
@@ -16,7 +14,7 @@ end
 
 local function image_to_gray(img, n)
   for i = 1, n do
-    local y = floor(0.3 * img[i].red + 0.59 * img[i].green + 0.11 * img[i].blue)
+    local y = math.floor(0.3 * img[i].red + 0.59 * img[i].green + 0.11 * img[i].blue)
     img[i].red = y
     img[i].green = y
     img[i].blue = y
