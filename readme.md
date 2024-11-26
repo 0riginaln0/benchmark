@@ -1,7 +1,10 @@
+original idea: [Luajit is Wicked Fast?](https://youtu.be/gS8Wji_YnAE?si=yPbr1y9nf8jVKlvM)
+
 # Benchmark of several lanugages
 
 - Ruby (ruby 3.3.6)
 - Python (CPython 3.12.0, PyPy 7.3.9 with GCC 11.3.0)
+- Janet (1.37.0)
 - Lua (Lua 5.1.5, LuaJIT 2.1.1, LuaJIT 2.1.1 with C struct)
 - JavaScript (Node v20.18.0)
 - Java (OpenJDK 23.0.1)
