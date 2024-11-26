@@ -1,6 +1,6 @@
 original idea: [Luajit is Wicked Fast?](https://youtu.be/gS8Wji_YnAE?si=yPbr1y9nf8jVKlvM)
 
-# Benchmark of several lanugages
+# Benchmark of several languages
 
 - Ruby (ruby 3.3.6)
 - Python (CPython 3.12.0, PyPy 7.3.9 with GCC 11.3.0)
